@@ -1,4 +1,4 @@
-// const prod = process.env.NODE_ENV === 'production';
+const prod = process.env.NODE_ENV === 'production';
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -9,7 +9,7 @@ module.exports = {
         static: './dist',
     },
     
-    // devtool: prod ? undefined : 'source-map',
+    devtool: prod ? undefined : 'source-map',
 
     entry: './src/index.tsx',
 
